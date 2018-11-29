@@ -1,0 +1,53 @@
+<div class="section blue-grey lighten-4 ">
+  <div class="row container grey-text text-darken-3">
+    <h3 class="header light center-align">CONTACT US</h3>
+    <p class="center-align" [hidden]="!success">
+      <strong>Message sent with success !</strong><br>
+      Thank you for your interest, we will get as soon as possible!
+    </p>
+    <p class="center-align" [hidden]="!errorMail">
+      <strong>Error while sending your Message !</strong><br>
+      Please try again later or get in touch with us at contact@vincifuze.com !
+    </p>
+    
+    <!-- Contact Form -->
+    <form [formGroup]="contactForm" [hidden]="success || errorMail" (ngSubmit)="submitHandler(contactForm.value)"> 
+      
+      <!-- name -->
+      <div class="input-field col s12">
+        <input type="text" id="name" class="validate" formControlName="name" required  minlength="3">
+        <label for="name">Your Name</label>
+        <span class="helper-text" *ngIf="name.errors?.required && name.touched">Your Name is required</span>
+        <span class="helper-text" *ngIf="name.errors?.minlength && name.touched && !name.errors?.required">Mininum name length of 3 letters</span>
+      </div>
+    
+      <!-- email -->
+      <div class="input-field col s12">
+        <input type="email" id="email" class="validate" formControlName="email" required email >
+        <label for="email">Your Email</label>
+        <span class="helper-text" *ngIf="email.errors?.required && email.touched">Your Email is required</span>
+        <span class="helper-text" *ngIf="email.errors?.email && email.touched && !email.errors?.required">Please enter a Correct email</span>
+      </div>
+    
+      <!-- message -->
+      <div class="input-field col s12">
+        <textarea class="materialize-textarea validate" id="message" formControlName="message" required></textarea>
+        <label for="message">Your Message</label>
+        <span class="helper-text" *ngIf="message.invalid && message.touched">Message required</span>
+      </div>
+    
+      <div class="col s12 center-align">
+        <button type="submit" [hidden]="loading" [disabled]="contactForm.invalid || loading" class="waves-effect waves-light btn" color="primary"><i class="light icon ion-md-send right"></i>Send</button>
+      </div>
+
+      <div class="col s12 center-align" [hidden]="!loading">
+        <p><strong>Sending your Message !</strong></p>
+        <div class="progress" >
+          <div class="indeterminate"></div>
+        </div>
+      </div>
+      
+    
+    </form>
+  </div>
+</div>

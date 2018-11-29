@@ -1,0 +1,29 @@
+<footer class="page-footer teal lighten-5 grey-text text-darken-3 z-depth-3">
+  <div class="container" >
+    <div class="row">
+      <div class="light">
+        <div class="col m6 s12 ">
+          <ul class="table-of-contents ">
+            <li *ngFor="let menuItem of menuItems" routerLinkActive="active">
+              <a [routerLink]="menuItem.route" routerLinkActive="active" class="black-text text-darken-5">{{menuItem.name}}</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col m3 offset-m3 s12 ">
+          <h6>Name</h6>
+          <address>
+            Address
+          </address>
+        </div>               
+      </div>
+      
+    </div>
+  </div>
+  <div class="footer-copyright teal darken-4">
+    <div class="container">
+      <div class="center-align">
+         © 2018 - All Rights Reserved.
+      </div>
+    </div>
+  </div>
+</footer>

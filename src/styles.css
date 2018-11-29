@@ -1,0 +1,59 @@
+  .page-flexbox-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+  footer {    
+    box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.15),0 -6px 20px 0 rgba(0, 0, 0, 0.16);
+  }
+  .contact-section{
+    box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.15),0 -6px 20px 0 rgba(0, 0, 0, 0.16);
+  }
+
+@media only screen and (min-width: 1200px){
+  html {
+      font-size: 1.9em;
+  }
+} 
+@media only screen and (min-width: 992px){
+  html {
+      font-size: 1.5em;
+  }
+} 
+@media only screen and (min-width: 0){
+  html {
+      font-size: 1.3em;
+  }
+}
+.shadow-text {
+  -webkit-text-stroke: 1px #ebebeb;
+  text-shadow: 2px 2px 6px rgb(0, 0, 0);
+}
+.text-over-image {
+  position: absolute;
+  top: 50%;
+  transform: translate(0%,-50%);
+  z-index: 1;     
+}
+.parallax-shadow{
+    box-shadow: 0 -3px 6px 0 rgba(0, 0, 0, 0.15),0 -6px 15px 0 rgba(0, 0, 0, 0.16);
+ }
+ h5 {
+  font-size: 1.4rem!important;
+ }
+ .card-title {
+    font-size: 1em!important;
+    font-weight: 400!important;
+}
+.card-content {
+    padding: 5px!important;
+}
+.card-content p{
+    font-size: 1em!important;
+    padding: 10px!important;
+    font-weight: 300!important;
+}

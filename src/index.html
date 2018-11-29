@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Default Website</title>
+    <meta name="description" content="Default Website" />
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="msapplication-starturl" content="/">
+    <meta name="theme-color" content="#f5f5f5">
+    
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic" async> 
+    <link href="https://unpkg.com/ionicons@4.4.6/dist/css/ionicons.min.css" rel="stylesheet" async> 
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Global site tag (gtag.js) - Google Analytics
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-127643941-1');
+      </script>
+    -->
+    <link rel="manifest" href="/manifest.json">
+    <style>
+      .splash {
+        opacity: 0;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        color: #272c33;
+        padding-top: 25vh;
+        text-align: center;
+        z-index: -1;
+        font-family: monospace;
+      }
+      app-root:empty+.splash {
+        opacity: 1;
+        z-index: 100;
+      }
+      .splash h1 {
+        margin-bottom: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <app-root class="page-flexbox-wrapper"></app-root>
+
+    <div class="splash" id="content">
+      <img src="/assets/images/logo/safari-pinned-tab.svg" alt="Nordynamic">
+      <h2>Default Website</h2>
+      <h4>Loading...</h4>
+    </div>
+    <noscript>
+      <p>
+        Sorry, Javascript must enabled to use this app.
+      </p>
+    </noscript>
+  </body>
+</html>

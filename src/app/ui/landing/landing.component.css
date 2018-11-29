@@ -1,0 +1,23 @@
+ img{
+    display: block !important;
+    opacity: 1 !important;
+    transform: translate3d(-50%, 20%, 0px)!important;
+ }
+
+ .parallax-container{
+    max-height: 90vh;
+ }
+
+.promo-example {
+    overflow: hidden;
+}
+.promo {
+    width: 100%;
+}
+.promo-caption {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+

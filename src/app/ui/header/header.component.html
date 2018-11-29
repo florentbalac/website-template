@@ -1,0 +1,25 @@
+<div class="navbar-fixed z-depth-3">
+  <nav class="teal darken-4">
+    <div class="nav-wrapper">
+      <a routerLink="" aria-label="Home">
+        <picture>
+          <source type="image/webp" srcset="../../../assets/images/logo_square.webp">
+          <img height="50" class="icon hide-on-med-and-down" src="../../../assets/images/logo_square.png" alt="logo">
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="../../../assets/images/logo_square.webp">
+          <img height="50"  class="icon hide-on-small-only hide-on-large-only" src="../../../assets/images/logo_square.png" alt="logo">
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="../../../assets/images/logo_square.webp">
+          <img height="50" class="icon center hide-on-med-and-up" src="../../../assets/images/logo_square.png" alt="logo">
+        </picture>
+      </a>
+
+      <ul class="right hide-on-small-only">
+        <li *ngFor="let menuItem of menuItems" routerLinkActive="active"><a [routerLink]="menuItem.route">{{
+            menuItem.name | uppercase }}</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
